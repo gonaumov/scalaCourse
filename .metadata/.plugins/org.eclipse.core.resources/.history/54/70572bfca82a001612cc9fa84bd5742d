@@ -1,0 +1,10 @@
+object Sheet5 {
+  println("Welcome to the Scala worksheet")
+  def isVomel(ch: Char): Boolean = {
+  	"aeiou".contains(ch)
+  }
+  
+  def vomels(s: String): String = {
+  
+  }
+}

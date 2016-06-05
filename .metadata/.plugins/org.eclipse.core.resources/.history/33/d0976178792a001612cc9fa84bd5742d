@@ -1,0 +1,7 @@
+object Sheet2 {
+	println("hui")
+	import scala.math._
+	sqrt(10)
+	1.to(10)
+  1.to(10).map(sqrt(_))
+}

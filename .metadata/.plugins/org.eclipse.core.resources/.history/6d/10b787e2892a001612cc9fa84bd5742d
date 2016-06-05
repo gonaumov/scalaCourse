@@ -1,0 +1,5 @@
+object Sheet3 {
+  println("Welcome to the Scala worksheet")
+  "Mississippi".distinct
+  "Rhine".permutations.toArray
+}

@@ -1,0 +1,8 @@
+object Sheet4 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  def sum(args: Int*) = {
+  	var result = 0
+  	for(arg <- args) result += arg
+  	result
+  }                                               //> sum: (args: Int*)Int
+}

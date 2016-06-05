@@ -1,0 +1,25 @@
+object Sheet6 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  def isVomel(ch: Char): Boolean = {
+  	"aeiou".contains(ch)
+  }                                               //> isVomel: (ch: Char)Boolean
+  
+  def vomels(s: String): String = {
+      for(c <- s if isVomel(c)) yield c
+  }                                               //> vomels: (s: String)String
+  
+  def vomels2(s: String): String = {
+      var result = "";
+      if(s.length > 0) {
+        val element = s.slice(0, 1)
+      	if(isVomel(element)) result += element.toChar
+      } else {
+      
+      }
+      	
+    	result
+  }                                               //> vomels2: (s: String)String
+  
+  vomels2("halabalanica")                         //> h
+                                                  //| res0: String = ""
+}

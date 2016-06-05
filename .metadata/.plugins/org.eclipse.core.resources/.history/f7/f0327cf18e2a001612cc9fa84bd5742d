@@ -1,0 +1,12 @@
+object Sheet3 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  "Mississippi".distinct                          //> res0: String = Misp
+  "Rhine".permutations.toArray                    //| ih, enhRi, enhiR, eniRh, enihR)
+  'A'.toInt                                       //> res2: Int = 65
+  'B'.toInt                                       //> res3: Int = 66
+  'C'.toInt                                       //> res4: Int = 67
+  "ABC".sum.toInt                                 //> res5: Int = 198
+  ('A' + 'B' + 'C').toChar                        //> res6: Char = Æ
+   'Æ'.toInt                                      //> res7: Int = 198
+   'Æ'.toDouble                                   //> res8: Double = 198.0
+}

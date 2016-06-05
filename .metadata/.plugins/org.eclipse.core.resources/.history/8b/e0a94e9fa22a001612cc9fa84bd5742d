@@ -1,0 +1,5 @@
+object Sheet3 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  def decorate(str: String, left: String = "[", right: String = "]") =
+  	left + str + right
+}

@@ -1,0 +1,5 @@
+object Sheet2 {
+	println("hui")
+	import scala.math._
+	sqrt(10)
+}

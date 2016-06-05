@@ -1,0 +1,9 @@
+object Sheet1 {
+  println("Welcome to the Scala worksheet")
+  val x = -1
+  
+  val result = if(x > 0) "something"
+  
+  val result2 = ()
+  
+}

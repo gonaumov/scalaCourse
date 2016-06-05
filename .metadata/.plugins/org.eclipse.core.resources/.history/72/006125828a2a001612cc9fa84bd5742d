@@ -1,0 +1,7 @@
+object Sheet3 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  "Mississippi".distinct                          //> res0: String = Misp
+  "Rhine".permutations.toArray
+  'A'.toInt
+  "ABC".sum.toInt
+}

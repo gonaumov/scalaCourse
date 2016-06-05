@@ -1,0 +1,9 @@
+object Sheet7 {
+  def isVomel(ch: Char): Boolean = {
+  	"aeiou".contains(ch)
+  }                                               //> isVomel: (ch: Char)Boolean
+  
+  def vomels(s: String, vomelChars: String = '' ignoreChars: Boolean = true): String = {
+      for(c <- s if isVomel(c)) yield c
+  }                                               //> vomels: (s: String, ignoreChars: Boolean)String
+}
