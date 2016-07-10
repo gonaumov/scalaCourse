@@ -1,0 +1,38 @@
+object Sheet1 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  
+  val zones = java.util.TimeZone.getAvailableIDs  //> zones  : Array[String] = Array(Africa/Abidjan, Africa/Accra, Africa/Addis_Ab
+                                                  //| aba, Africa/Algiers, Africa/Asmara, Africa/Asmera, Africa/Bamako, Africa/Ban
+                                                  //| gui, Africa/Banjul, Africa/Bissau, Africa/Blantyre, Africa/Brazzaville, Afri
+                                                  //| ca/Bujumbura, Africa/Cairo, Africa/Casablanca, Africa/Ceuta, Africa/Conakry,
+                                                  //|  Africa/Dakar, Africa/Dar_es_Salaam, Africa/Djibouti, Africa/Douala, Africa/
+                                                  //| El_Aaiun, Africa/Freetown, Africa/Gaborone, Africa/Harare, Africa/Johannesbu
+                                                  //| rg, Africa/Juba, Africa/Kampala, Africa/Khartoum, Africa/Kigali, Africa/Kins
+                                                  //| hasa, Africa/Lagos, Africa/Libreville, Africa/Lome, Africa/Luanda, Africa/Lu
+                                                  //| bumbashi, Africa/Lusaka, Africa/Malabo, Africa/Maputo, Africa/Maseru, Africa
+                                                  //| /Mbabane, Africa/Mogadishu, Africa/Monrovia, Africa/Nairobi, Africa/Ndjamena
+                                                  //| , Africa/Niamey, Africa/Nouakchott, Africa/Ouagadougou, Africa/Porto-Novo, A
+                                                  //| frica/Sao_Tome, Africa/Timbuktu, Africa/Tripoli, Africa/Tunis, Africa/Windho
+                                                  //| ek, America/Adak, Americ
+                                                  //| Output exceeds cutoff limit.
+    zones.map(s => s.split("/")).map(x => x(2))   //> java.lang.ArrayIndexOutOfBoundsException: 2
+                                                  //| 	at Sheet1$$anonfun$main$1$$anonfun$2.apply(Sheet1.scala:5)
+                                                  //| 	at Sheet1$$anonfun$main$1$$anonfun$2.apply(Sheet1.scala:5)
+                                                  //| 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike
+                                                  //| .scala:234)
+                                                  //| 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike
+                                                  //| .scala:234)
+                                                  //| 	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimize
+                                                  //| d.scala:33)
+                                                  //| 	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+                                                  //| 	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+                                                  //| 
+                                                  //| 	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:186)
+                                                  //| 	at Sheet1$$anonfun$main$1.apply$mcV$sp(Sheet1.scala:5)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$$anonfun$$exe
+                                                  //| cute$1.apply$mcV$sp(WorksheetSupport.scala:76)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$.redirected(W
+                                                  //| orksheetSupport.scala:65)
+                                                  //| 	at org.sc
+                                                  //| Output exceeds cutoff limit.
+}

@@ -1,0 +1,31 @@
+object Sheet1 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  
+  def swapTouple(input: (Int, Int)): (Int, Int) = {
+  	input match {
+  		case (x, y) => (y, x)
+  	}
+  }                                               //> swapTouple: (input: (Int, Int))(Int, Int)
+  
+  swapTouple((2,1))                               //> res0: (Int, Int) = (1,2)
+  
+  
+  def swap(input: Array[Int]): Array[Int] = {
+  	input match {
+  		case Array(a,b, otherElements @ _*) => Array(b,a) ++ otherElements
+  		case _ => a
+  	}
+  }                                               //> swap: (input: Array[Int])Array[Int]
+  
+  swap(Array(1))                                  //> scala.MatchError: [I@617c74e5 (of class [I)
+                                                  //| 	at Sheet1$$anonfun$main$1.swap$1(Sheet1.scala:14)
+                                                  //| 	at Sheet1$$anonfun$main$1.apply$mcV$sp(Sheet1.scala:19)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$$anonfun$$exe
+                                                  //| cute$1.apply$mcV$sp(WorksheetSupport.scala:76)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$.redirected(W
+                                                  //| orksheetSupport.scala:65)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$.$execute(Wor
+                                                  //| ksheetSupport.scala:75)
+                                                  //| 	at Sheet1$.main(Sheet1.scala:1)
+                                                  //| 	at Sheet1.main(Sheet1.scala)
+}

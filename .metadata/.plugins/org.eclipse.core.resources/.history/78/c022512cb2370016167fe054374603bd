@@ -1,0 +1,6 @@
+object Sheet1 {
+  println("Welcome to the Scala worksheet")
+  
+  val zones = java.util.TimeZone.getAvailableIDs
+    zones.map((s: String) => s.split("/") map x => x(1))
+}

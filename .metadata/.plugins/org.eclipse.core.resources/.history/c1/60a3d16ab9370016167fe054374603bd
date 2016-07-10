@@ -1,0 +1,14 @@
+object Sheet2 {
+  println("Welcome to the Scala worksheet")
+  1.to(10).reduceLeft(_*_)
+  
+  def factorial(input: Int): Int = {
+  	1.to(input).reduceLeft(_*_)
+  }
+  
+  def customPow(input: Int): Int = {
+  	1.to(input).map( _ => 2).reduceLeft(_*_)
+  }
+  
+  factorial(4)
+}

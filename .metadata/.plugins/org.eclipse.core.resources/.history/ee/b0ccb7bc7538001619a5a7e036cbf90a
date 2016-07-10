@@ -1,0 +1,18 @@
+object Sheet3 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  abstract class Item
+  case class Article(description: String, price: Double) extends Item
+  case class Bundle(description: String, discount: Double, items: Item*) extends Item
+  
+  val special = Bundle("Father's day special", 20.0,
+  Article("Scala for the Impatient", 39.95),
+  Bundle("Anchor Distillerry Sailer", 10.0,
+  Article("Old Potrero Straight Rye Whiskey", 79.95),
+  Article("Junipero Gin", 32.95)))                //> special  : Sheet3.Bundle = Bundle(Father's day special,20.0,WrappedArray(Art
+                                                  //| icle(Scala for the Impatient,39.95), Bundle(Anchor Distillerry Sailer,10.0,W
+                                                  //| rappedArray(Article(Old Potrero Straight Rye Whiskey,79.95), Article(Juniper
+                                                  //| o Gin,32.95)))))
+  val first = special.items.toIterable.drop(1)    //> first  : Iterable[Sheet3.Item] = WrappedArray(Bundle(Anchor Distillerry Sail
+                                                  //| er,10.0,WrappedArray(Article(Old Potrero Straight Rye Whiskey,79.95), Articl
+                                                  //| e(Junipero Gin,32.95))))
+}

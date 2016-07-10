@@ -1,0 +1,28 @@
+object Sheet1 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+
+  class Time(val hour: Int, var minutes: Int) {
+    require(hour >= 0 && hour <= 23 && minutes >= 0 && minutes <= 23)
+    
+    def this(hour: Int) {
+    	this(hour, 0)
+    }
+    
+    def before(other: Time): Boolean = {
+        other.hour < hour || (other.hour <= hour && other.minutes < minutes)
+    }
+    
+    override def toString(): String = {
+        hour + ":" + minutes
+    }
+  }
+  
+  
+
+  var hui = new Time(4)                           //> hui  : Sheet1.Time = 4:0
+  
+  hui.before(new Time(5))                         //> res0: Boolean = false
+  hui.toString()                                  //> res1: String = 4:0
+  hui.minutes                                     //> res2: Int = 0
+  hui.minutes = 2
+}

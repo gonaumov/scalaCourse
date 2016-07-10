@@ -1,0 +1,32 @@
+object Sheet1 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  
+  val zones = java.util.TimeZone.getAvailableIDs  //> zones  : Array[String] = Array(Africa/Abidjan, Africa/Accra, Africa/Addis_Ab
+                                                  //| aba, Africa/Algiers, Africa/Asmara, Africa/Asmera, Africa/Bamako, Africa/Ban
+                                                  //| gui, Africa/Banjul, Africa/Bissau, Africa/Blantyre, Africa/Brazzaville, Afri
+                                                  //| ca/Bujumbura, Africa/Cairo, Africa/Casablanca, Africa/Ceuta, Africa/Conakry,
+                                                  //|  Africa/Dakar, Africa/Dar_es_Salaam, Africa/Djibouti, Africa/Douala, Africa/
+                                                  //| El_Aaiun, Africa/Freetown, Africa/Gaborone, Africa/Harare, Africa/Johannesbu
+                                                  //| rg, Africa/Juba, Africa/Kampala, Africa/Khartoum, Africa/Kigali, Africa/Kins
+                                                  //| hasa, Africa/Lagos, Africa/Libreville, Africa/Lome, Africa/Luanda, Africa/Lu
+                                                  //| bumbashi, Africa/Lusaka, Africa/Malabo, Africa/Maputo, Africa/Maseru, Africa
+                                                  //| /Mbabane, Africa/Mogadishu, Africa/Monrovia, Africa/Nairobi, Africa/Ndjamena
+                                                  //| , Africa/Niamey, Africa/Nouakchott, Africa/Ouagadougou, Africa/Porto-Novo, A
+                                                  //| frica/Sao_Tome, Africa/Timbuktu, Africa/Tripoli, Africa/Tunis, Africa/Windho
+                                                  //| ek, America/Adak, Americ
+                                                  //| Output exceeds cutoff limit.
+    zones.map(s => s.split("/")).filter { x => { x.length > 2 } }
+                                                  //> res0: Array[Array[String]] = Array(Array(CET), Array(CST6CDT), Array(Cuba), 
+                                                  //| Array(EET), Array(EST5EDT), Array(Egypt), Array(Eire), Array(GB), Array(GB-E
+                                                  //| ire), Array(GMT), Array(GMT0), Array(Greenwich), Array(Hongkong), Array(Icel
+                                                  //| and), Array(Iran), Array(Israel), Array(Jamaica), Array(Japan), Array(Kwajal
+                                                  //| ein), Array(Libya), Array(MET), Array(MST7MDT), Array(NZ), Array(NZ-CHAT), A
+                                                  //| rray(Navajo), Array(PRC), Array(PST8PDT), Array(Poland), Array(Portugal), Ar
+                                                  //| ray(ROK), Array(Singapore), Array(Turkey), Array(UCT), Array(UTC), Array(Uni
+                                                  //| versal), Array(W-SU), Array(WET), Array(Zulu), Array(EST), Array(HST), Array
+                                                  //| (MST), Array(ACT), Array(AET), Array(AGT), Array(ART), Array(AST), Array(BET
+                                                  //| ), Array(BST), Array(CAT), Array(CNT), Array(CST), Array(CTT), Array(EAT), A
+                                                  //| rray(ECT), Array(IET), Array(IST), Array(JST), Array(MIT), Array(NET), Array
+                                                  //| (NST), Array(PLT), Array(PNT), Array(PRT), Array(PST), Array(SST), Array(VST
+                                                  //| ))
+}

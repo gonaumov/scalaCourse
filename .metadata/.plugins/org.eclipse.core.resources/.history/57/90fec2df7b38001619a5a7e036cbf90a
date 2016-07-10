@@ -1,0 +1,25 @@
+object Sheet3 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  abstract class Item
+  case class Article(description: String, price: Double) extends Item
+  case class Bundle(description: String, discount: Double, items: Item*) extends Item
+  
+  val special = Bundle("Father's day special", 20.0,
+  Article("Scala for the Impatient", 39.95),
+  Bundle("Anchor Distillerry Sailer", 10.0,
+  Article("Old Potrero Straight Rye Whiskey", 79.95),
+  Article("Junipero Gin", 32.95)))                //> special  : Sheet3.Bundle = Bundle(Father's day special,20.0,WrappedArray(Art
+                                                  //| icle(Scala for the Impatient,39.95), Bundle(Anchor Distillerry Sailer,10.0,W
+                                                  //| rappedArray(Article(Old Potrero Straight Rye Whiskey,79.95), Article(Juniper
+                                                  //| o Gin,32.95)))))
+  val (description, price) = special match {
+  	case Bundle(_,_,f, _*) => f match {
+  		case Article(d,f) => (d,f)
+  	}
+  }                                               //> description  : String = Scala for the Impatient
+                                                  //| price  : Double = 39.95
+  
+  
+  val  hui = Bundle(_,_,Article(x,y), _*) = special //> x  : String = Scala for the Impatient
+                                                  //| y  : Double = 39.95
+}

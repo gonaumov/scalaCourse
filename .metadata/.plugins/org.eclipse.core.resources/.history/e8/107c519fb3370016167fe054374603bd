@@ -1,0 +1,33 @@
+object Sheet1 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  
+  val zones = java.util.TimeZone.getAvailableIDs  //> zones  : Array[String] = Array(Africa/Abidjan, Africa/Accra, Africa/Addis_Ab
+                                                  //| aba, Africa/Algiers, Africa/Asmara, Africa/Asmera, Africa/Bamako, Africa/Ban
+                                                  //| gui, Africa/Banjul, Africa/Bissau, Africa/Blantyre, Africa/Brazzaville, Afri
+                                                  //| ca/Bujumbura, Africa/Cairo, Africa/Casablanca, Africa/Ceuta, Africa/Conakry,
+                                                  //|  Africa/Dakar, Africa/Dar_es_Salaam, Africa/Djibouti, Africa/Douala, Africa/
+                                                  //| El_Aaiun, Africa/Freetown, Africa/Gaborone, Africa/Harare, Africa/Johannesbu
+                                                  //| rg, Africa/Juba, Africa/Kampala, Africa/Khartoum, Africa/Kigali, Africa/Kins
+                                                  //| hasa, Africa/Lagos, Africa/Libreville, Africa/Lome, Africa/Luanda, Africa/Lu
+                                                  //| bumbashi, Africa/Lusaka, Africa/Malabo, Africa/Maputo, Africa/Maseru, Africa
+                                                  //| /Mbabane, Africa/Mogadishu, Africa/Monrovia, Africa/Nairobi, Africa/Ndjamena
+                                                  //| , Africa/Niamey, Africa/Nouakchott, Africa/Ouagadougou, Africa/Porto-Novo, A
+                                                  //| frica/Sao_Tome, Africa/Timbuktu, Africa/Tripoli, Africa/Tunis, Africa/Windho
+                                                  //| ek, America/Adak, Americ
+                                                  //| Output exceeds cutoff limit.
+    zones.map(s => s.split("/")).filter { x => { x.length > 2 } }
+                                                  //> res0: Array[Array[String]] = Array(Array(America, Argentina, Buenos_Aires), 
+                                                  //| Array(America, Argentina, Catamarca), Array(America, Argentina, ComodRivadav
+                                                  //| ia), Array(America, Argentina, Cordoba), Array(America, Argentina, Jujuy), A
+                                                  //| rray(America, Argentina, La_Rioja), Array(America, Argentina, Mendoza), Arra
+                                                  //| y(America, Argentina, Rio_Gallegos), Array(America, Argentina, Salta), Array
+                                                  //| (America, Argentina, San_Juan), Array(America, Argentina, San_Luis), Array(A
+                                                  //| merica, Argentina, Tucuman), Array(America, Argentina, Ushuaia), Array(Ameri
+                                                  //| ca, Indiana, Indianapolis), Array(America, Indiana, Knox), Array(America, In
+                                                  //| diana, Marengo), Array(America, Indiana, Petersburg), Array(America, Indiana
+                                                  //| , Tell_City), Array(America, Indiana, Vevay), Array(America, Indiana, Vincen
+                                                  //| nes), Array(America, Indiana, Winamac), Array(America, Kentucky, Louisville)
+                                                  //| , Array(America, Kentucky, Monticello), Array(America, North_Dakota, Beulah)
+                                                  //| , Array(America, North_D
+                                                  //| Output exceeds cutoff limit.
+}

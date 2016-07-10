@@ -1,0 +1,20 @@
+object Sheet1 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  
+  def swapTouple(input: (Int, Int)): (Int, Int) = {
+  	input match {
+  		case (x, y) => (y, x)
+  	}
+  }                                               //> swapTouple: (input: (Int, Int))(Int, Int)
+  
+  swapTouple((2,1))                               //> res0: (Int, Int) = (1,2)
+  
+  
+  def swap(input: Array[Int]): Array[Int] = {
+  	input match {
+  		case Array(a,b, otherElements @ _*) => Array(b,a) ++ otherElements
+  	}
+  }                                               //> swap: (input: Array[Int])Array[Int]
+  
+  swap(Array(1,2))                                //> res1: Array[Int] = Array(2, 1)
+}

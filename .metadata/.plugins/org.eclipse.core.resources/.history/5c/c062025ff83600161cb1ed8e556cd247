@@ -1,0 +1,33 @@
+object Sheet4 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  import java.io._
+  trait Buffered extends InputStream {
+  	val SIZE = 1024
+  	private var end = 0
+  	private val buffer = new Array[Byte](SIZE)
+ 		private var pos = 0
+ 		
+ 		override def read() = {
+ 			if (pos == end) {
+ 				end = super.read(buffer, 0, SIZE)
+ 				pos = 0
+ 			}
+ 			
+ 			if (pos == end) -1 else {
+ 				pos += 1
+ 				buffer(pos -1 )
+ 			}
+ 		}
+  }
+  
+  
+  var reader = new FileInputStream("/home/georginaumov/Documents/test.txt") with Buffered
+                                                  //> reader  : java.io.FileInputStream with Sheet4.Buffered = Sheet4$$anonfun$mai
+                                                  //| n$1$$anon$1@6a5fc7f7
+  reader.read()                                   //> [B@3b6eb2ec
+                                                  //| res0: Int = 72
+  reader.read()                                   //> [B@3b6eb2ec
+                                                  //| res1: Int = 101
+  reader.read()                                   //> [B@3b6eb2ec
+                                                  //| res2: Int = 114
+}

@@ -1,0 +1,54 @@
+object Sheet3 {
+  trait Logged {
+  	def log(msg: String) {
+  	}
+  }
+
+  trait ConsoleLogger extends Logged {
+  	override def log(msg: String) {
+  			println(msg)
+  	}
+  }
+  
+  trait TimestampLogger extends Logged {
+  	override def log(msg: String) {
+  			super.log(new java.util.Date() + " " + msg)
+  	}
+  }
+  
+  trait ShortLogger extends Logged {
+  	val maxLength = 15
+  	override def log(msg: String) {
+  		super.log(
+  			(if(msg.length <= maxLength) msg
+  			else msg.substring(0, maxLength -3) + "..."))
+  	}
+  }
+  
+  class SavingAccount extends Logged {
+  	private var balance: Double = 0
+  	def withdraw(amount: Double) {
+  	  if(amount > balance) log("Insufficient funds")
+  	  else balance -= amount
+  	}
+  }
+  
+  val acct1: SavingAccount = new SavingAccount with ConsoleLogger with TimestampLogger with ShortLogger {
+  	override val maxLength = 5
+  }                                               //> acct1  : Sheet3.SavingAccount = Sheet3$$anonfun$main$1$$anon$1@61e4705b
+  acct1.withdraw(1000)                            //> java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+                                                  //| 	at java.lang.String.substring(String.java:1967)
+                                                  //| 	at Sheet3$ShortLogger$class.log(Sheet3.scala:24)
+                                                  //| 	at Sheet3$$anonfun$main$1$$anon$1.log(Sheet3.scala:36)
+                                                  //| 	at Sheet3$SavingAccount.withdraw(Sheet3.scala:31)
+                                                  //| 	at Sheet3$$anonfun$main$1.apply$mcV$sp(Sheet3.scala:39)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$$anonfun$$exe
+                                                  //| cute$1.apply$mcV$sp(WorksheetSupport.scala:76)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$.redirected(W
+                                                  //| orksheetSupport.scala:65)
+                                                  //| 	at org.scalaide.worksheet.runtime.library.WorksheetSupport$.$execute(Wor
+                                                  //| ksheetSupport.scala:75)
+                                                  //| 	at Sheet3$.main(Sheet3.scala:34)
+                                                  //| 	at Sheet3.main(Sheet3.scala)
+  val acct2 = new SavingAccount with Logged
+}

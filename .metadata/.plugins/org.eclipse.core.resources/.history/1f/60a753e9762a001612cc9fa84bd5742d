@@ -1,4 +1,0 @@
-object Sheet1 {
-  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
-  6+7                                             //> res0: Int(13) = 13
-}

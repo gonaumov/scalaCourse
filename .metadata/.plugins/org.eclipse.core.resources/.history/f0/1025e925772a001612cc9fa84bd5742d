@@ -1,5 +1,0 @@
-object Sheet1 {
-  val a = 6*7
-  a
-  a = 43.
-}

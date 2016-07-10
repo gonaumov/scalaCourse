@@ -1,7 +1,0 @@
-object Sheet3 {
-  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
-  "Mississippi".distinct                          //> res0: String = Misp
-  "Rhine".permutations.toArray                    //> res1: Array[String] = Array(Rhine, Rhien, Rhnie, Rhnei, Rhein, Rheni, Rihne,
-  "A".toInt                                       //| ih, enhRi, enhiR, eniRh, enihR)
-  "ABC".sum.toInt                                 //> res2: Int = 198
-}

@@ -1,0 +1,7 @@
+object Sheet3 {
+  println("Welcome to the Scala worksheet")
+  
+  def concat(): String = {
+  	''
+  }
+}

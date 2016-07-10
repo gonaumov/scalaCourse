@@ -1,4 +1,0 @@
-object Sheet2 {
-	println("hui")                            //> hui
-	import scala.math._
-}

@@ -1,7 +1,0 @@
-object Sheet1 {
-  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
-  val x = 4 
-  
-  if(x > 0) 1 else -1
-  
-}

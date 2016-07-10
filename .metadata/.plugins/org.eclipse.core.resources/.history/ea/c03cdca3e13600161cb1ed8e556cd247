@@ -1,0 +1,9 @@
+import com.sun.org.apache.xalan.internal.xsltc.compiler.Import
+import com.sun.javafx.geom.Rectangle
+
+object Sheet1 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  
+  import java.awt_
+  val r = new Rectangle(4, 10, 20, 30)
+}

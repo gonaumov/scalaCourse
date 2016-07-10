@@ -1,0 +1,9 @@
+object Sheet4 {
+  println("Welcome to the Scala worksheet")
+  
+  def While(func: () => Unit, condition: () => Boolean): Unit = {
+  		if (condition == false) [
+  				func()
+  		}
+  }
+}

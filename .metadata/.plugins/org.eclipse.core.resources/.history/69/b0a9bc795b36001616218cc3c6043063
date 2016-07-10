@@ -1,0 +1,30 @@
+object Sheet1 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+
+  class Time(val hour: Int, var minutes: Int) {
+    require(hour >= 0 && hour <= 23 && minutes >= 0 && minutes <= 23)
+    
+    def this(hour: Int) {
+    	this(hour, 0)
+    }
+    
+    def < (other: Time): Boolean = {
+        other.hour < hour || (other.hour <= hour && other.minutes < minutes)
+    }
+    
+    override def toString(): String = {
+        hour + ":" + minutes
+    }
+  }
+  
+  
+
+  var hui = new Time(4)                           //> hui  : Sheet1.Time = 4:0
+  if(hui < (new Time(1)) {
+  	println("uppper")
+  }
+  hui.toString()                                  //> res1: String = 4:0
+  hui.minutes                                     //> res2: Int = 0
+  hui.minutes = 2
+  hui.toString                                    //> res3: String = 4:2
+}

@@ -1,0 +1,10 @@
+object Sheet3 {
+  println("Welcome to the Scala worksheet")
+  
+  def concat(strings: Seq[String], separator: String): String = {
+    var out: String = ""
+    strings.reduceLeft((f: String, s: String) => {
+    })
+  	""
+  }
+}

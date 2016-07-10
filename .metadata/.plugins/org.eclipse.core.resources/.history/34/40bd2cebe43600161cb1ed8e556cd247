@@ -1,0 +1,19 @@
+object Sheet2 {
+  println("Welcome to the Scala worksheet")
+  
+  trait RectangleLike extends geom.Ellipse2D.Double {
+  	def setFrame(x: Double, y: Double, w: Double, h: Double): Unit
+  	def getX: Double
+  	def getY: Double
+  	def getWidth: Double
+  	def getHeight: Double
+  	def translate(dx: Double, dy: Double) {
+  	   setFrame(getX + dx, getY + dy, getWidth, getHeight)
+  	}
+  	
+  }
+    import java.awt._
+  val egg = new geom.Ellipse2D.Double(4, 10, 20, 30) width RectangleLike
+  egg.translate(10, 20)
+  egg
+}

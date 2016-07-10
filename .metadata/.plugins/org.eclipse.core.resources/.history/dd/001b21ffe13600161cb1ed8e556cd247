@@ -1,0 +1,8 @@
+object Sheet1 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  
+  import java.awt._
+  val r = new Rectangle(4, 10, 20, 30)            //> r  : java.awt.Rectangle = java.awt.Rectangle[x=4,y=10,width=20,height=30]
+  r.translate(10, 20)
+  r
+}

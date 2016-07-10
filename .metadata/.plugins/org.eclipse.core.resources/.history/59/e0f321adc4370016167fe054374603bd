@@ -1,0 +1,19 @@
+object Sheet4 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+  
+  def While(func: => Unit, condition:  => Boolean): Unit = {
+  		    if(condition == true) {
+  						func
+  						While(func, condition)
+  				}
+  		
+  }                                               //> While: (func: => Unit, condition: => Boolean)Unit
+  
+  val n = 20                                      //> n  : Int = 20
+  var i = 1                                       //> i  : Int = 1
+  var f = 1                                       //> f  : Int = 1
+  
+  While({f*=i; i+=1}, {i < n})
+  
+  println(i)                                      //> 2
+}

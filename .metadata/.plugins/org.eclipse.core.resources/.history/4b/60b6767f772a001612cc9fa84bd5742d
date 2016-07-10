@@ -1,6 +1,0 @@
-object Sheet1 {
-  val a = 6*7                                     //> a  : Int = 42
-  a                                               //> res0: Int = 42
-  val b : BigInt  = 6*7                           //> b  : BigInt = 42
-  b.pow(1000)
-}
